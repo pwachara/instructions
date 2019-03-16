@@ -1,0 +1,152 @@
+<template name="ValuerInstructionsValuerInstructionsPendingDetails">
+	<div class="page-container container" id="content">
+		<div class="row" id="title_row">
+			<div class="col-md-12">
+			</div>
+		</div>
+		{{> ValuerInstructionsValuerInstructionsPendingDetailsForm}}
+	</div>
+</template>
+
+<template name="ValuerInstructionsValuerInstructionsPendingDetailsForm">
+	<div id="valuer-instructions-valuer-instructions-pending-details-form" class="">
+		<h2 id="component-title">
+			<a href="#" id="form-back-button" class="btn btn-default" title="back">
+				<span class="fa fa-chevron-left">
+				</span>
+			</a>
+			Valuer Instructions Pending Details
+		</h2>
+		<form role="form">
+			{{#if errorMessage}}
+			<div class="alert alert-warning">
+				{{errorMessage}}
+			</div>
+			{{/if}}
+
+			{{#if infoMessage}}
+			<div class="alert alert-success">
+				{{infoMessage}}
+			</div>
+			{{/if}}
+			<div class="form-group  field-bank_ref">
+				<label for="bank_ref">
+					Bank Ref
+				</label>
+				<div class="input-div">
+					<p class="form-control-static  control-field-bank_ref">
+						{{valuer_instructions_pending.bank_ref}}
+					</p>
+				</div>
+			</div>
+			<div class="form-group  field-date">
+				<label for="date">
+					Date
+				</label>
+				<div class="input-div">
+					<p class="form-control-static  control-field-date">
+						{{formatDate valuer_instructions_pending.date 'DD/MM/YYYY'}}
+					</p>
+				</div>
+			</div>
+			<div class="form-group  field-valuer-name">
+				<label for="valuer.name">
+					Valuer
+				</label>
+				<div class="input-div">
+					<p class="form-control-static  control-field-valuer-name">
+						{{valuer_instructions_pending.valuer.name}}
+					</p>
+				</div>
+			</div>
+			<div class="form-group  field-borrower">
+				<label for="borrower">
+					Borrower
+				</label>
+				<div class="input-div">
+					<p class="form-control-static  control-field-borrower">
+						{{valuer_instructions_pending.borrower}}
+					</p>
+				</div>
+			</div>
+			<div class="form-group  field-property">
+				<label for="property">
+					Property
+				</label>
+				<div class="input-div">
+					<p class="form-control-static  control-field-property">
+						{{valuer_instructions_pending.property}}
+					</p>
+				</div>
+			</div>
+			<div class="form-group  field-update">
+				<label for="update">
+					Update
+				</label>
+				<div class="input-div">
+					<p class="form-control-static  control-field-update">
+						{{valuer_instructions_pending.update}}
+					</p>
+				</div>
+			</div>
+			<div class="form-group  field-update_date">
+				<label for="update_date">
+					Date of Update
+				</label>
+				<div class="input-div">
+					<p class="form-control-static  control-field-update_date">
+						{{formatDate valuer_instructions_pending.update_date 'DD/MM/YYYY'}}
+					</p>
+				</div>
+			</div>
+			<div class="form-group  field-status">
+				<label for="status">
+					Status
+				</label>
+				<div class="input-div">
+					<p class="form-control-static  control-field-status">
+						{{valuer_instructions_pending.status}}
+					</p>
+				</div>
+			</div>
+			<div class="form-group  field-date_closed">
+				<label for="date_closed">
+					Date Closed
+				</label>
+				<div class="input-div">
+					<p class="form-control-static  control-field-date_closed">
+						{{formatDate valuer_instructions_pending.date_closed 'DD/MM/YYYY'}}
+					</p>
+				</div>
+			</div>
+			<div class="form-group  field-value">
+				<label for="value">
+					Value (KES)
+				</label>
+				<div class="input-div">
+					<p class="form-control-static  control-field-value">
+						{{valuer_instructions_pending.value}}
+					</p>
+				</div>
+			</div>
+			<div class="form-group  field-rm">
+				<label for="rm">
+					Relationship Manager
+				</label>
+				<div class="input-div">
+					<p class="form-control-static  control-field-rm">
+						{{valuer_instructions_pending.rm}}
+					</p>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="submit-div">
+					<a href="#" id="form-close-button" class="btn btn-primary">
+						OK
+					</a>
+				</div>
+			</div>
+		</form>
+	</div>
+</template>
+
